@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16D30" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CollectionPrettyCell" customModule="DYZB" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="182" height="215"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="182" height="215"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S4D-cR-Qek">
+                        <rect key="frame" x="0.0" y="191" width="46" height="14"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="14" id="GKe-aV-Oez"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <state key="normal" title="广州市" image="ico_location">
+                            <color key="titleColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        </state>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="kyo黑猫警长" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="clD-ue-m8v">
+                        <rect key="frame" x="5" y="170" width="172" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="2E2-lW-pEC"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="live_cell_default_phone" translatesAutoresizingMaskIntoConstraints="NO" id="Bjl-kB-4LG">
+                        <rect key="frame" x="0.0" y="0.0" width="182" height="165"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="666在线" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2jN-FA-Vzv">
+                        <rect key="frame" x="117" y="5" width="60" height="20"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.50441459760273977" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="ZKd-kb-yEN"/>
+                            <constraint firstAttribute="height" constant="20" id="yZm-yL-u33"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="keyPath">
+                                <integer key="value" value="3"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="clD-ue-m8v" secondAttribute="trailing" constant="5" id="Cjc-mU-Rxo"/>
+                <constraint firstItem="clD-ue-m8v" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="GOZ-cA-zcI"/>
+                <constraint firstAttribute="bottom" secondItem="S4D-cR-Qek" secondAttribute="bottom" constant="10" id="O2U-QE-ayG"/>
+                <constraint firstAttribute="trailing" secondItem="2jN-FA-Vzv" secondAttribute="trailing" constant="5" id="OFH-aA-fi4"/>
+                <constraint firstItem="Bjl-kB-4LG" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="foq-sM-xnd"/>
+                <constraint firstAttribute="trailing" secondItem="Bjl-kB-4LG" secondAttribute="trailing" id="hKU-U0-dEA"/>
+                <constraint firstItem="clD-ue-m8v" firstAttribute="top" secondItem="Bjl-kB-4LG" secondAttribute="bottom" constant="5" id="hLe-2A-Ecn"/>
+                <constraint firstItem="Bjl-kB-4LG" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="l7I-yS-MDs"/>
+                <constraint firstItem="S4D-cR-Qek" firstAttribute="top" secondItem="clD-ue-m8v" secondAttribute="bottom" constant="5" id="n4r-qR-Bra"/>
+                <constraint firstItem="S4D-cR-Qek" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="tfM-fw-Xn3"/>
+                <constraint firstItem="2jN-FA-Vzv" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="x9k-5W-SdO"/>
+            </constraints>
+            <size key="customSize" width="174" height="179"/>
+            <point key="canvasLocation" x="96" y="118.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="ico_location" width="12" height="12"/>
+        <image name="live_cell_default_phone" width="103" height="103"/>
+    </resources>
+</document>
