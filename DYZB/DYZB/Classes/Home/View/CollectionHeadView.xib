@@ -58,6 +58,10 @@
                 <constraint firstItem="pn6-n4-d0Q" firstAttribute="centerY" secondItem="g2z-CD-g20" secondAttribute="centerY" id="kjN-yR-2dR"/>
                 <constraint firstAttribute="bottom" secondItem="ght-QG-lad" secondAttribute="bottom" constant="5" id="zsf-tM-1Mw"/>
             </constraints>
+            <connections>
+                <outlet property="iconImageView" destination="g2z-CD-g20" id="1wM-bB-ZSo"/>
+                <outlet property="titleLabel" destination="pn6-n4-d0Q" id="EN9-ig-VRd"/>
+            </connections>
             <point key="canvasLocation" x="12" y="57"/>
         </collectionReusableView>
     </objects>
