@@ -22,7 +22,7 @@ class CollectionCycleCell: UICollectionViewCell {
             let iconURL = NSURL(string: cycleModel?.pic_url ?? "")!
             
             let resource : ImageResource = ImageResource(downloadURL: iconURL as URL)
-            iconImageView.kf.setImage(with: resource)
+            iconImageView.kf.setImage(with: resource, placeholder: UIImage(named:"Img_default"), options: nil, progressBlock: nil, completionHandler: nil)
         }
     }
 

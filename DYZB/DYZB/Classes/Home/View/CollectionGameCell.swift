@@ -21,7 +21,9 @@ class CollectionGameCell: UICollectionViewCell {
             titleLabel.text = group?.tag_name
             
             if let iconURL = URL(string: group?.icon_url ?? "") {
-                iconImageView.kf.setImage(with: iconURL)
+//                iconImageView.kf.setImage(with: iconURL)
+                let resource : ImageResource = ImageResource(downloadURL: iconURL as URL)
+                iconImageView.kf.setImage(with: resource, placeholder: UIImage(named:"Img_default"), options: nil, progressBlock: nil, completionHandler: nil)
             } else {
                 iconImageView.image = UIImage(named: "home_more_btn")
             }

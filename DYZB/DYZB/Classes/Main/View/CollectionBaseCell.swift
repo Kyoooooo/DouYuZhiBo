@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class CollectionBaseCell: UICollectionViewCell {
     //控件属性
@@ -34,7 +35,9 @@ class CollectionBaseCell: UICollectionViewCell {
             
             // 3.设置封面图片
             guard let iconURL = URL(string: anchor.vertical_src) else { return }
-            iconImageView.kf.setImage(with: iconURL)
+//            iconImageView.kf.setImage(with: iconURL)
+            let resource : ImageResource = ImageResource(downloadURL: iconURL as URL)
+            iconImageView.kf.setImage(with: resource, placeholder: UIImage(named:"Img_default"), options: nil, progressBlock: nil, completionHandler: nil)
         }
     }
 }
