@@ -9,21 +9,24 @@
 import UIKit
 
 private let kItemMargin : CGFloat = 10
-private let kHeaderViewH : CGFloat = 50
 
-private let kNormalCellID = "kNormalCellID"
-private let kHeaderViewID = "kHeaderViewID"
-
-let kPrettyCellID = "kPrettyCellID"
 let kNormalItemW = (kScreenW - 3 * kItemMargin) / 2
 let kNormalItemH = kNormalItemW * 3 / 4
 let kPrettyItemH = kNormalItemW * 4 / 3
+private let kHeaderViewH : CGFloat = 50
+
+private let kCycleViewH = kScreenW * 3 / 8
+
+private let kNormalCellID = "kNormalCellID"
+private let kHeaderViewID = "kHeaderViewID"
+private let kPrettyCellID = "kPrettyCellID"
+
 
 class RecommendViewController: UIViewController {
 
     //懒加载属性
-    lazy var recomendVM : RecommendViewModel = RecommendViewModel()
-    lazy var collectionView : UICollectionView = {[weak self] in
+    fileprivate lazy var recomendVM : RecommendViewModel = RecommendViewModel()
+    fileprivate lazy var collectionView : UICollectionView = {[weak self] in
         //1.创建布局
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: kNormalItemW, height: kNormalItemH)
@@ -45,7 +48,11 @@ class RecommendViewController: UIViewController {
         
         return collectionView
     }()
-    
+    fileprivate lazy var cycleView : RecommendCycleView = {
+        let cycleView = RecommendCycleView.recomendCycleView()
+        cycleView.frame = CGRect(x: 0, y: -kCycleViewH, width: kScreenW, height: kCycleViewH)
+        return cycleView
+    }()
     
     //系统回调函数
     override func viewDidLoad() {
@@ -63,15 +70,27 @@ class RecommendViewController: UIViewController {
 //设置UI
 extension RecommendViewController {
     fileprivate func setupUI() {
-        //添加collectionView
+        //1.添加collectionView
         view.addSubview(collectionView)
+        
+        //2.将cycleView添加到CollectionView中
+        collectionView.addSubview(cycleView)
+        
+        //3.设置collectionView的那边距
+        collectionView.contentInset = UIEdgeInsets(top: kCycleViewH, left: 0, bottom: 0, right: 0)
     }
 }
 
 extension RecommendViewController {
     fileprivate func loadData() {
+        //1.请求推荐数据
         recomendVM.requestData { 
             self.collectionView.reloadData()
+        }
+        
+        //2.请求轮播数据
+        recomendVM.requestCycleData {
+            self.cycleView.cycleModels = self.recomendVM.cycleModels
         }
     }
 }
