@@ -16,11 +16,11 @@ class CollectionGameCell: UICollectionViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     
     // 定义模型属性
-    var group : AnchorGroup? {
+    var baseGame : BaseGameModel? {
         didSet {
-            titleLabel.text = group?.tag_name
+            titleLabel.text = baseGame?.tag_name
             
-            if let iconURL = URL(string: group?.icon_url ?? "") {
+            if let iconURL = URL(string: baseGame?.icon_url ?? "") {
 //                iconImageView.kf.setImage(with: iconURL)
                 let resource : ImageResource = ImageResource(downloadURL: iconURL as URL)
                 iconImageView.kf.setImage(with: resource, placeholder: UIImage(named:"Img_default"), options: nil, progressBlock: nil, completionHandler: nil)

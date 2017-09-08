@@ -6,13 +6,12 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CollectionGameCell" customModule="DYZB" customModuleProvider="target">
+        <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CollectionGameCell" customModule="DYZB" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="80" height="90"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -21,17 +20,15 @@
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="英雄联盟" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KTJ-7Y-t4r">
                         <rect key="frame" x="15.5" y="65.5" width="49.5" height="14.5"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="14.5" id="M3h-lz-yHG"/>
-                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rcy-SK-QpO">
-                        <rect key="frame" x="17.5" y="15" width="45.5" height="45.5"/>
+                        <rect key="frame" x="17.5" y="14.5" width="45.5" height="45.5"/>
                         <constraints>
-                            <constraint firstAttribute="width" secondItem="Rcy-SK-QpO" secondAttribute="height" multiplier="1:1" id="wp8-yI-vqr"/>
+                            <constraint firstAttribute="width" constant="45" id="Gvm-k6-35u"/>
+                            <constraint firstAttribute="height" constant="45" id="t5s-Nq-Z35"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -40,14 +37,23 @@
                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                         </userDefinedRuntimeAttributes>
                     </imageView>
+                    <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dzx-RM-4yj">
+                        <rect key="frame" x="0.0" y="90" width="80" height="1"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="BrY-u6-LLz"/>
+                        </constraints>
+                    </view>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="Rcy-SK-QpO" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="15" id="0Rk-Xq-15q"/>
-                <constraint firstAttribute="bottom" secondItem="KTJ-7Y-t4r" secondAttribute="bottom" constant="10" id="Epa-Ij-Oc4"/>
-                <constraint firstItem="KTJ-7Y-t4r" firstAttribute="top" secondItem="Rcy-SK-QpO" secondAttribute="bottom" constant="5" id="FMA-Y3-YGl"/>
-                <constraint firstItem="Rcy-SK-QpO" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="UCr-yU-hc2"/>
-                <constraint firstItem="KTJ-7Y-t4r" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="nqF-3G-DRS"/>
+                <constraint firstItem="KTJ-7Y-t4r" firstAttribute="top" secondItem="Rcy-SK-QpO" secondAttribute="bottom" constant="5" id="56N-5l-9ev"/>
+                <constraint firstItem="Rcy-SK-QpO" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" constant="-8" id="CAp-A5-Bey"/>
+                <constraint firstAttribute="trailing" secondItem="dzx-RM-4yj" secondAttribute="trailing" id="Q3j-5d-gx8"/>
+                <constraint firstAttribute="bottom" secondItem="dzx-RM-4yj" secondAttribute="bottom" constant="-1" id="Qic-LC-KQm"/>
+                <constraint firstItem="dzx-RM-4yj" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="W79-dF-OU4"/>
+                <constraint firstItem="Rcy-SK-QpO" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="lii-gN-cF3"/>
+                <constraint firstItem="KTJ-7Y-t4r" firstAttribute="centerX" secondItem="Rcy-SK-QpO" secondAttribute="centerX" id="wdh-Gj-IUI"/>
             </constraints>
             <connections>
                 <outlet property="iconImageView" destination="Rcy-SK-QpO" id="hbF-6L-9jT"/>
