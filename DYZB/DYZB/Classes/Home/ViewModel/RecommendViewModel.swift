@@ -8,8 +8,9 @@
 
 import UIKit
 
-class RecommendViewModel {
-    lazy var anchorGroups : [AnchorGroup] = [AnchorGroup]()
+class RecommendViewModel : BaseViewModel {
+    
+    //懒加载属性
     lazy var cycleModels : [CycleModel] = [CycleModel]()
     fileprivate lazy var bigDataGroup : AnchorGroup = AnchorGroup()
     fileprivate lazy var prettyGroup : AnchorGroup = AnchorGroup()
@@ -73,20 +74,24 @@ extension RecommendViewModel {
         
         //3.请求2-12部分游戏数据
         dGroup.enter()
-        NetworkTools.requestData(.get, URLString: "http://capi.douyucdn.cn/api/v1/getHotCate", parameters: parameters) { (result) in
-            //1.将result转成字典模型
-            guard let resultDic = result as? [String : AnyObject] else {return}
-            
-            //2.根据data的key获取数组
-            guard let dataArray = resultDic["data"] as? [[String : AnyObject]] else {return}
-            
-            //3.遍历数组，获取字典，将字典转成模型对象
-            for dic in dataArray {
-                let group = AnchorGroup(dict: dic)
-                self.anchorGroups.append(group)
-            }
+//        NetworkTools.requestData(.get, URLString: "http://capi.douyucdn.cn/api/v1/getHotCate", parameters: parameters) { (result) in
+//            //1.将result转成字典模型
+//            guard let resultDic = result as? [String : AnyObject] else {return}
+//            
+//            //2.根据data的key获取数组
+//            guard let dataArray = resultDic["data"] as? [[String : AnyObject]] else {return}
+//            
+//            //3.遍历数组，获取字典，将字典转成模型对象
+//            for dic in dataArray {
+//                let group = AnchorGroup(dict: dic)
+//                self.anchorGroups.append(group)
+//            }
+//            dGroup.leave()
+//            
+//        }
+        
+        loadAnchorData(URLString: "http://capi.douyucdn.cn/api/v1/getHotCate", parameters: parameters) { 
             dGroup.leave()
-            
         }
         
         //所有的数据都请求到

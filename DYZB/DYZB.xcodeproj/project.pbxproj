@@ -52,6 +52,8 @@
 		31E339EB1F5FFC260060E8BE /* CollectionCycleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31E339E91F5FFC260060E8BE /* CollectionCycleCell.xib */; };
 		31FD96E91F63763F00AF5B30 /* AmuseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FD96E81F63763F00AF5B30 /* AmuseViewController.swift */; };
 		31FD96EB1F6379E300AF5B30 /* AmuseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FD96EA1F6379E300AF5B30 /* AmuseViewModel.swift */; };
+		31FD96EE1F63804D00AF5B30 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FD96ED1F63804D00AF5B30 /* BaseViewModel.swift */; };
+		31FD96F01F6384B300AF5B30 /* BaseAnchorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FD96EF1F6384B300AF5B30 /* BaseAnchorViewController.swift */; };
 		6B5A0046EDDAB06953C2820B /* Pods_DYZB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A2A5F9E254F24546446F58 /* Pods_DYZB.framework */; };
 /* End PBXBuildFile section */
 
@@ -124,6 +126,8 @@
 		31E339E91F5FFC260060E8BE /* CollectionCycleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionCycleCell.xib; sourceTree = "<group>"; };
 		31FD96E81F63763F00AF5B30 /* AmuseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmuseViewController.swift; sourceTree = "<group>"; };
 		31FD96EA1F6379E300AF5B30 /* AmuseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmuseViewModel.swift; sourceTree = "<group>"; };
+		31FD96ED1F63804D00AF5B30 /* BaseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		31FD96EF1F6384B300AF5B30 /* BaseAnchorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseAnchorViewController.swift; sourceTree = "<group>"; };
 		398B0DF0D23FB051F738A380 /* Pods-DYZB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYZB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DYZB/Pods-DYZB.debug.xcconfig"; sourceTree = "<group>"; };
 		72A2A5F9E254F24546446F58 /* Pods_DYZB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DYZB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A760513005E7505EA9F5E62D /* Pods-DYZB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYZB.release.xcconfig"; path = "Pods/Target Support Files/Pods-DYZB/Pods-DYZB.release.xcconfig"; sourceTree = "<group>"; };
@@ -346,6 +350,7 @@
 		31C0390C1F59856B00938AD8 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				31FD96EC1F63800C00AF5B30 /* ViewModel */,
 				31C0390D1F59856B00938AD8 /* Controller */,
 				31C039101F59856B00938AD8 /* Model */,
 				31C039111F59856B00938AD8 /* View */,
@@ -358,6 +363,7 @@
 			children = (
 				31C039231F5985CC00938AD8 /* Main.storyboard */,
 				31C0390E1F59856B00938AD8 /* MainViewController.swift */,
+				31FD96EF1F6384B300AF5B30 /* BaseAnchorViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -436,6 +442,14 @@
 				319A2DF11F5EBD0C00B8C9B9 /* NSDate-Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		31FD96EC1F63800C00AF5B30 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				31FD96ED1F63804D00AF5B30 /* BaseViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		AFBA381E372A3B6AA4B8789C /* Pods */ = {
@@ -666,11 +680,13 @@
 				31C0391F1F59856B00938AD8 /* MainViewController.swift in Sources */,
 				3132AEF81F62340400AD0053 /* GameViewModel.swift in Sources */,
 				31AE193F1F5C010200378E67 /* RecommendViewController.swift in Sources */,
+				31FD96F01F6384B300AF5B30 /* BaseAnchorViewController.swift in Sources */,
 				3132AEF61F622D7900AD0053 /* GameViewController.swift in Sources */,
 				3141DB621F5A42120064A9BB /* PageTitleView.swift in Sources */,
 				319A2DF41F5EC1DA00B8C9B9 /* AnchorGroup.swift in Sources */,
 				3141DB681F5AC45C0064A9BB /* PageContentView.swift in Sources */,
 				31C039291F598E3E00938AD8 /* UIBarButtonItem-Extension.swift in Sources */,
+				31FD96EE1F63804D00AF5B30 /* BaseViewModel.swift in Sources */,
 				31E339EA1F5FFC260060E8BE /* CollectionCycleCell.swift in Sources */,
 				3132AEFA1F6234F500AD0053 /* GameModel.swift in Sources */,
 				3132AEFC1F62377C00AD0053 /* BaseGameModel.swift in Sources */,
