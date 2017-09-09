@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16D30" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="AmuseMenuView" customModule="DYZB" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Yfk-s0-YeL">
+                    <rect key="frame" x="168" y="168" width="39" height="37"/>
+                    <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="currentPageIndicatorTintColor" red="1" green="0.57431159899999995" blue="0.36402308100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </pageControl>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="YT3-Kw-nX3">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="173"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="a3A-FP-tXg">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="iN0-l3-epB" id="M2k-qd-YD5"/>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="2iA-Z2-poD"/>
+                    </connections>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="YT3-Kw-nX3" secondAttribute="trailing" id="22F-Ih-lY5"/>
+                <constraint firstAttribute="bottom" secondItem="Yfk-s0-YeL" secondAttribute="bottom" constant="-5" id="JzD-T3-3yY"/>
+                <constraint firstItem="YT3-Kw-nX3" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="T4E-KQ-YPP"/>
+                <constraint firstItem="Yfk-s0-YeL" firstAttribute="top" secondItem="YT3-Kw-nX3" secondAttribute="bottom" constant="-5" id="cVU-GT-cW3"/>
+                <constraint firstItem="YT3-Kw-nX3" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="o3G-i3-qcD"/>
+                <constraint firstItem="Yfk-s0-YeL" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="wuW-SU-dYc"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="collectionView" destination="YT3-Kw-nX3" id="j2T-uE-f5E"/>
+                <outlet property="pageControl" destination="Yfk-s0-YeL" id="WUs-dL-J27"/>
+            </connections>
+            <point key="canvasLocation" x="36.5" y="121.5"/>
+        </view>
+    </objects>
+</document>
