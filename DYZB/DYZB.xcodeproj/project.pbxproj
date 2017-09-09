@@ -50,6 +50,8 @@
 		31E339E71F5FF7740060E8BE /* CycleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E339E61F5FF7740060E8BE /* CycleModel.swift */; };
 		31E339EA1F5FFC260060E8BE /* CollectionCycleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E339E81F5FFC260060E8BE /* CollectionCycleCell.swift */; };
 		31E339EB1F5FFC260060E8BE /* CollectionCycleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31E339E91F5FFC260060E8BE /* CollectionCycleCell.xib */; };
+		31FD96E91F63763F00AF5B30 /* AmuseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FD96E81F63763F00AF5B30 /* AmuseViewController.swift */; };
+		31FD96EB1F6379E300AF5B30 /* AmuseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FD96EA1F6379E300AF5B30 /* AmuseViewModel.swift */; };
 		6B5A0046EDDAB06953C2820B /* Pods_DYZB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A2A5F9E254F24546446F58 /* Pods_DYZB.framework */; };
 /* End PBXBuildFile section */
 
@@ -120,6 +122,8 @@
 		31E339E61F5FF7740060E8BE /* CycleModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CycleModel.swift; sourceTree = "<group>"; };
 		31E339E81F5FFC260060E8BE /* CollectionCycleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionCycleCell.swift; sourceTree = "<group>"; };
 		31E339E91F5FFC260060E8BE /* CollectionCycleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionCycleCell.xib; sourceTree = "<group>"; };
+		31FD96E81F63763F00AF5B30 /* AmuseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmuseViewController.swift; sourceTree = "<group>"; };
+		31FD96EA1F6379E300AF5B30 /* AmuseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmuseViewModel.swift; sourceTree = "<group>"; };
 		398B0DF0D23FB051F738A380 /* Pods-DYZB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYZB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DYZB/Pods-DYZB.debug.xcconfig"; sourceTree = "<group>"; };
 		72A2A5F9E254F24546446F58 /* Pods_DYZB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DYZB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A760513005E7505EA9F5E62D /* Pods-DYZB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYZB.release.xcconfig"; path = "Pods/Target Support Files/Pods-DYZB/Pods-DYZB.release.xcconfig"; sourceTree = "<group>"; };
@@ -208,6 +212,7 @@
 			children = (
 				319A2DEF1F5E9D0C00B8C9B9 /* RecommendViewModel.swift */,
 				3132AEF71F62340400AD0053 /* GameViewModel.swift */,
+				31FD96EA1F6379E300AF5B30 /* AmuseViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -275,6 +280,7 @@
 				31C039251F59869200938AD8 /* HomeViewController.swift */,
 				31AE193E1F5C010200378E67 /* RecommendViewController.swift */,
 				3132AEF51F622D7900AD0053 /* GameViewController.swift */,
+				31FD96E81F63763F00AF5B30 /* AmuseViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -656,6 +662,7 @@
 			files = (
 				31E339E31F5FEB9E0060E8BE /* RecommendCycleView.swift in Sources */,
 				312AFF6D1F59101600EB7ECD /* AppDelegate.swift in Sources */,
+				31FD96EB1F6379E300AF5B30 /* AmuseViewModel.swift in Sources */,
 				31C0391F1F59856B00938AD8 /* MainViewController.swift in Sources */,
 				3132AEF81F62340400AD0053 /* GameViewModel.swift in Sources */,
 				31AE193F1F5C010200378E67 /* RecommendViewController.swift in Sources */,
@@ -668,6 +675,7 @@
 				3132AEFA1F6234F500AD0053 /* GameModel.swift in Sources */,
 				3132AEFC1F62377C00AD0053 /* BaseGameModel.swift in Sources */,
 				31E339E71F5FF7740060E8BE /* CycleModel.swift in Sources */,
+				31FD96E91F63763F00AF5B30 /* AmuseViewController.swift in Sources */,
 				3141DB641F5A45D80064A9BB /* Common.swift in Sources */,
 				3141DB661F5A55A30064A9BB /* UIColor-Extension.swift in Sources */,
 				31462EEA1F5E3BE10027D967 /* CollectionHeadView.swift in Sources */,

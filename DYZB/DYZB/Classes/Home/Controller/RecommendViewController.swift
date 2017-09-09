@@ -10,9 +10,9 @@ import UIKit
 
 private let kItemMargin : CGFloat = 10
 
-let kNormalItemW = (kScreenW - 3 * kItemMargin) / 2
-let kNormalItemH = kNormalItemW * 3 / 4
-let kPrettyItemH = kNormalItemW * 4 / 3
+private let kNormalItemW = (kScreenW - 3 * kItemMargin) / 2
+private let kNormalItemH = kNormalItemW * 3 / 4
+private let kPrettyItemH = kNormalItemW * 4 / 3
 private let kHeaderViewH : CGFloat = 50
 
 private let kCycleViewH = kScreenW * 3 / 8
