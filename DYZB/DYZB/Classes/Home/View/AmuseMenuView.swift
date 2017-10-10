@@ -77,10 +77,12 @@ extension AmuseMenuView : UICollectionViewDataSource {
         // 2.判断越界问题
         if endIndex > groups!.count - 1 {
             endIndex = groups!.count - 1
+            // 3.取出数据,并且赋值给cell
+            cell.groups = Array(groups![startIndex...endIndex])
+        } else {
+            // 3.取出数据,并且赋值给cell
+            cell.groups = groups
         }
-        
-        // 3.取出数据,并且赋值给cell
-        cell.groups = Array(groups![startIndex...endIndex])
     }
 }
 
